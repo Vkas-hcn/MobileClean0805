@@ -51,6 +51,7 @@ import java.io.File
 import java.text.DecimalFormat
 import com.kite.folding.pape.rmobileclean.R
 import com.kite.folding.pape.rmobileclean.FinishActivity
+import com.kite.folding.pape.rmobileclean.app.CleanApp
 
 // Data classes and enums from original code
 enum class FileType {
@@ -684,7 +685,7 @@ fun FileItemRow(
                             }
                         },
                         update = { imageView ->
-                            Glide.with(imageView.context)
+                            Glide.with(CleanApp.instance)
                                 .load(fileItem.file)
                                 .apply(
                                     RequestOptions()
